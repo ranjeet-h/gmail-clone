@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <h1> gmail clone</h1>
+      <h1> gmail cone</h1>
       </div>
   );
 }
