@@ -1,13 +1,31 @@
 import React from 'react';
 import './App.css';
 import Header from './Header'
+import Sidebar from './Sidebar'
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import EmailList from './EmailList';
+import Mail from './Mail';
 
 function App() {
   return (
-    <div className="App">
-      <Header/>
-      <h1> gmail cone</h1>
+    <Router>
+      <div className="App">
+        <Header />
+
+        <div className="app__body">
+          <Sidebar />
+          
+          <Switch>
+            <Route path="/mail">
+              <Mail />
+            </Route>
+            <Route path="/">
+              <EmailList />
+            </Route>
+          </Switch>
+        </div>
       </div>
+    </Router>
   );
 }
 
